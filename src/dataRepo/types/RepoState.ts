@@ -1,5 +1,3 @@
 import RepoData from "./RepoData";
 
-export default interface RepoState {
-  [key: string]: RepoData;
-}
+export type RepoState = Record<string, RepoData>;

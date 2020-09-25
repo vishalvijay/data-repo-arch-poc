@@ -1,10 +1,11 @@
+import { PayloadAction } from "@reduxjs/toolkit";
 import SuccessCode from "../SuccessCode";
-import RepoState from "../types/RepoState";
+import { RepoState } from "../types/RepoState";
 import RepoPayload from "../types/RepoPayload";
 
 const setLoading = (
   state: RepoState,
-  { payload }: { payload: RepoPayload }
+  { payload }: PayloadAction<RepoPayload>
 ): void => {
   const newState = state;
 

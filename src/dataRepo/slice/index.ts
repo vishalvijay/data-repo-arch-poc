@@ -3,7 +3,7 @@ import setLoading from "./setLoading";
 import setFailed from "./setFailed";
 import setSuccess from "./setSuccess";
 import reset from "./reset";
-import RepoState from "../types/RepoState";
+import { RepoState } from "../types/RepoState";
 
 const slice = createSlice({
   name: "repoSlice",

@@ -1,9 +1,10 @@
-import RepoState from "../types/RepoState";
+import { PayloadAction } from "@reduxjs/toolkit";
+import { RepoState } from "../types/RepoState";
 import RepoPayload from "../types/RepoPayload";
 
 const reset = (
   state: RepoState,
-  { payload }: { payload: RepoPayload }
+  { payload }: PayloadAction<RepoPayload>
 ): void => {
   const newState = state;
 
