@@ -9,10 +9,10 @@ const App: React.FC = () => {
       <div>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Page 1</Link>
           </li>
           <li>
-            <Link to="/other-page">Other</Link>
+            <Link to="/page-2">Page 2</Link>
           </li>
         </ul>
 
@@ -22,7 +22,7 @@ const App: React.FC = () => {
           <Route exact path="/">
             <HomePage />
           </Route>
-          <Route path="/other-page">
+          <Route path="/page-2">
             <OtherPage />
           </Route>
         </Switch>
