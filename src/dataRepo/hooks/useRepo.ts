@@ -8,11 +8,13 @@ import Repo from "../types/Repo";
 import { RootState } from "../../store";
 import { RepoState } from "../types/RepoState";
 
-type runType<T> = (...args: unknown[]) => Promise<T>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type runType<T> = (...args: any[]) => Promise<T>;
 
 const handleRun = async <T>(
   run: runType<T>,
-  args: unknown[],
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  args: any[],
   repoKey: string,
   actions: typeof repoSlice.actions
 ): Promise<void> => {
@@ -33,7 +35,8 @@ const handleRun = async <T>(
 const useRepo = <T>(
   repoKey: string,
   run: runType<T>,
-  ...args: unknown[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ...args: any[]
 ): Repo<T> => {
   const argsBasedRepoKey = useMemo(
     () => `${repoKey}_${generateUniqueId(args, repoKey)}`,

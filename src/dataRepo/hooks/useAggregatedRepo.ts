@@ -3,17 +3,17 @@ import { useCallback } from "react";
 import SuccessCode from "../SuccessCode";
 import RepoBase from "../types/RepoBase";
 
-const useAggregatedRepo = (repos: Record<string, RepoBase>): RepoBase => {
+const useAggregatedRepo = (repos: RepoBase[]): RepoBase => {
   let successCode: SuccessCode | null = null;
 
   const refreshMethods: (() => void)[] = [];
   const resetMethods: (() => void)[] = [];
 
-  Object.keys(repos).forEach((key) => {
-    refreshMethods.push(repos[key].refresh);
-    resetMethods.push(repos[key].reset);
+  repos.forEach((r) => {
+    refreshMethods.push(r.refresh);
+    resetMethods.push(r.reset);
     if (successCode !== SuccessCode.failed) {
-      const { successCode: currentSuccessCode } = repos[key];
+      const { successCode: currentSuccessCode } = r;
 
       if (
         successCode === null ||

@@ -1,9 +1,27 @@
 import React from "react";
+import { Container, Grid } from "@material-ui/core";
+import UserDetails from "../DataCards/UserDetails";
+import Product from "../DataCards/Product";
 
 const OtherPage: React.FC = () => {
   return (
     <div>
-      <h2>OtherPage</h2>
+      <Container>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={6}>
+            <UserDetails />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Product productId={200} />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Product productId={140} />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Product productId={200} />
+          </Grid>
+        </Grid>
+      </Container>
     </div>
   );
 };
