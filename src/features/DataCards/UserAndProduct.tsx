@@ -16,7 +16,7 @@ const UserAndProduct: React.FC = () => {
       <Box p={2}>
         <DataLoadingHandler
           successCode={aggregatedRepo.successCode}
-          errorMessage="Failed to load user details"
+          errorMessage="Failed to load user details or product details"
           onRetry={aggregatedRepo.refresh}
           render={(): JSX.Element => (
             <>
