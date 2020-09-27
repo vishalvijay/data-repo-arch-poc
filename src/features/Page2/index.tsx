@@ -3,7 +3,7 @@ import { Container, Grid } from "@material-ui/core";
 import UserDetails from "../DataCards/UserDetails";
 import Product from "../DataCards/Product";
 
-const OtherPage: React.FC = () => {
+const Page2: React.FC = () => {
   return (
     <div>
       <Container>
@@ -26,4 +26,4 @@ const OtherPage: React.FC = () => {
   );
 };
 
-export default OtherPage;
+export default Page2;

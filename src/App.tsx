@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import HomePage from "./features/HomePage";
-import OtherPage from "./features/OtherPage";
+import Page1 from "./features/Page1";
+import Page2 from "./features/Page2";
 
 const App: React.FC = () => {
   return (
@@ -20,10 +20,10 @@ const App: React.FC = () => {
 
         <Switch>
           <Route exact path="/">
-            <HomePage />
+            <Page1 />
           </Route>
           <Route path="/page-2">
-            <OtherPage />
+            <Page2 />
           </Route>
         </Switch>
       </div>

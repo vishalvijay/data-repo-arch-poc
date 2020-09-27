@@ -4,7 +4,7 @@ import UserDetails from "../DataCards/UserDetails";
 import Product from "../DataCards/Product";
 import UserAndProduct from "../DataCards/UserAndProduct";
 
-const HomePage: React.FC = () => {
+const Page1: React.FC = () => {
   return (
     <Container>
       <Grid container spacing={3}>
@@ -31,4 +31,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Page1;
