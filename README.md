@@ -1,3 +1,12 @@
+# DataRepoArch POC
+
+This repo is created for explaining DataRepoArch.
+
+DataRepoArch is a client-side architecture designed to use with react for better server state handling. This architecture also guarantees a very neat, highly pluggable, and maintainable codebase.
+
+More details can be found [here](https://dev.to/vishalvijay/datarepoarch-the-path-we-traveled-to-reach-react-query-l9l)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
